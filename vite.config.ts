@@ -19,8 +19,9 @@ export default defineConfig(() => {
     plugins: [
       AutoImport({
         imports: ['vue', 'pinia'],
-        dirs: ['src/composables', 'src/stores'],
-        dts: './auto-imports.d.ts'
+        dirs: ['src/composables', 'src/stores', 'src/plugins', 'src'],
+        dts: './auto-imports.d.ts',
+        vueTemplate: true
       }),
       Components({
         dts: './auto-components.d.ts'
